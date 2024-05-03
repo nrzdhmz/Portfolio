@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="cursormy"></div>
+    <header class="header">
+      <nav>
+        <a href="./index.html"><span>about</span></a>
+        <a class="active" href="./portfolio.html"><span>portfolio</span></a>
+        <a href="#"><span>socials</span></a>
+        <a href="./contact.html"><span>contact</span></a>
+      </nav>
+      <div class="burger">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+    </header>
+    <main>
+      <section class="centered">
+        <div class="wrapper">
+          <div class="headerMe">
+            <h1>web developer portfolio</h1>
+            <h3>
+              Here are the projects I've crafted using a blend of HTML, CSS, and JavaScript, embellished with captivating designs, animations, and more.
+            </h3>
+            <ul id="filterList"></ul>
+            <small
+              >Showing all projects. Use the filter to list them by skill or
+              technology.</small
+            >
+            <!-- <em>Filtering Projects</em> -->
+          </div>
+          <ul class="gridList"></ul>
+        </div>
+      </section>
+      <div class="pageControl">
+        <a href="./contact.html" class="next" title="Web Development Portfolio">
+          <span>contact</span>
+          <em></em>
+        </a>
+        <a href="./index.html" class="prev" title="Web Development Portfolio">
+          <span>about me</span>
+          <em></em>
+        </a>
+        <div class="lent">
+          <a
+            target="_blank"
+            href="https://github.com/nrzdhmz"
+            title="Follow on Github"
+            >Follow on Github</a
+          >
+        </div>
+      </div>
+    </main>
+    <footer>    
+      <h4>Let's Talk</h4>
+      <p>Wanna get in touch or talk about a project?
+        <br>
+        Feel free to contact me via email at 
+        <p class="texture"><a href="#">@nuruzadahamza.gmail.com</a></p>
+      </p>
+        or drop a line in the form at the 
+        <p class="texture"><a href="./contact.html">contact</a></p>
+      </p>
+    </footer>
+    <script src="./assets/js/shorter.js"></script>
+    <script src="./assets/js/cursor.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+.centered {
+  width: 100%;
+  padding: 80px 0 60px;
+  display: flex;
+  justify-content: center;
+
+  $breakpoints: (1600px: 880px, 1440px: 800px, 1300px: 760px, 1100px: 700px, 900px: 600px, 800px: 500px);
+
+  .wrapper {
+    @each $max-width, $value in $breakpoints {
+      @media only screen and (max-width: $max-width) {
+        max-width: $value;
+      } 
+    }
+    .headerMe {
+      margin: 0 20px;
+      text-align: left;
+      h1 {
+        color: #cacaca;
+        font-size: 2.625em;
+        line-height: 1.45em;
+        font-weight: 700;
+        letter-spacing: -2px;
+        margin-bottom: 0.1em;
+        width: 100%;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+      }
+      h3 {
+        font-size: 1.15em;
+        color: #8a8a8a;
+        font-family: Lato, Helvetica, Arial, sans-serif;
+        line-height: 1.7em;
+        word-spacing: 0.02em;
+        font-weight: 400;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -4px;
+        margin-top: 20px;
+        li {
+          padding: 8px 7px;
+          background-color: #313131;
+          color: #999;
+          border-width: 1px 1px 2px 1px;
+          border-style: solid;
+          border-color: #222;
+          border-radius: 3px;
+          text-transform: uppercase;
+          font-weight: 700;
+          line-height: 1em;
+          box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+          margin: 3px;
+          opacity: 1;
+          position: relative;
+          overflow: hidden;
+          margin-top: 7px;
+          margin-bottom: 7px;
+          &:hover,
+          &.activeList {
+            &::before,
+            &::after {
+              transform: translate3d(0, 0, 0);
+            }
+          }
+          &::before,
+          &::after {
+            content: " ";
+            left: 0;
+            display: block;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.1, 1);
+            height: 50%;
+          }
+          &::before {
+            top: 0;
+            background-color: #515151;
+            transform: translate3d(-105%, 0, 0);
+          }
+          &::after {
+            top: 50%;
+            background-color: #3f3f3f;
+            transition-delay: 75ms;
+            transform: translate3d(105%, 0, 0);
+          }          
+          span {
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+            // cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 1em;
+            color: #999;
+          }
+        }
+      }
+      small {
+        color: #8a8a8a;
+        line-height: 1em;
+        padding: 0 4px;
+        margin: 26px 0 4px;
+        display: block;
+        font-size: 0.9em;
+      }
+    }
+  }
+}

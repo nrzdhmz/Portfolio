@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "e4Q5ELLY1g_qjHcN8",
+        });
+      })();
+    </script>
+    <title>Contact</title>
+  </head>
+  <body>
+    <div id="cursormy"></div>
+    <header class="header">
+      <nav>
+        <a href="./index.html"><span>about</span></a>
+        <a class="active" href="./portfolio.html"><span>portfolio</span></a>
+        <a href="#"><span>socials</span></a>
+        <a href="./contact.html"><span>contact</span></a>
+      </nav>
+      <div class="burger">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+    </header>
+    <main>
+      <section class="centered">
+        <div class="wrapper">
+          <div class="headerMe">
+            <h1>Get in touch</h1>
+            <h3>
+              If you wanna get in touch, talk to me about a project
+              collaboration or just say hi, fill up the awesome form below or
+              send an email to nuruzadahamza@gmail.com and ~let's talk.
+            </h3>
+          </div>
+          <form class="form" id="form">
+            <div class="labels">
+              <label for="name" id="label1" class="label">Fill your full name</label>
+              <label for="name" id="label2" class="label">now enter your email address</label>
+              <label for="name" id="label3" class="label">now write your awesome message :)</label>
+            </div>
+            <input type="text" id="name" name="name" required />
+            <hr>
+            <div class="control">
+              <button class="submit submit-available" id="next" onclick="toggleInputType()">NEXT</button>
+              <button type="submit" class="submit submit-available"  onclick="resetForm()">RESET</button>
+              <button type="submit" class="submit submit-available" id="send" onclick="sendMail()">SUBMIT</button>
+            </div>
+          </form>
+          <div class="share">
+            <h4>Let's get social</h4>
+            <p>Follow my Github and profiles on Instagram and Linkedin.</p>
+            <div class="socialBtns">
+              <a target="_blank" href="https://github.com/nrzdhmz" class="icon github submit"><img src="./assets/svg/github-mark.svg" alt="github">GITHUB</a>
+              <a target="_blank" href="https://github.com/nrzdhmz" class="icon insta submit"><img src="./assets/svg/insta.svg" alt="insta">INSTAGRAM</a>
+              <a target="_blank" href="https://www.linkedin.com/in/hamza-nuruzade-a90531297/" class="icon linkedin submit"><img src="./assets/svg/linkedin.svg" alt="linkedin">LINKEDIN</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="pageControl">
+        <a
+          href="./portfolio.html"
+          class="prev"
+          title="Web Development Portfolio"
+        >
+          <span>portfolio</span><em></em>
+        </a>
+      </div>
+    </main>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/cursor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
