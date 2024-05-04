@@ -5,7 +5,7 @@ const projects = [
     imgAfter: "./assets/img/snakeafter.png",
     tags: ["BACK-END", "JAVA", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Snake_Java_Advanced",
-    link: "./SnakeGameJAVA.html",  // New key
+    link: "./SnakeGameJAVA.html",  
   },
   {
     name: "TextEditor",
@@ -13,7 +13,7 @@ const projects = [
     imgAfter: "./assets/img/texteditorafter.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Text-Editor",
-    link: "./TextEditor.html",  // New key
+    link: "./TextEditor.html",  
   },
   {
     name: "Calculator",
@@ -21,7 +21,7 @@ const projects = [
     imgAfter: "./assets/img/calculatorafter.png",
     tags: ["FRONT-END", "CSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Calculator_simple",
-    link: "./Calculator.html",  // New key
+    link: "./Calculator.html",  
   },
   {
     name: "TetrisJs",
@@ -29,7 +29,7 @@ const projects = [
     imgAfter: "./assets/img/tetrisafter.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Tetris_Javascript",
-    link: "./TetrisJs.html",  // New key
+    link: "./TetrisJs.html",  
   },
   {
     name: "MyPortfolio",
@@ -37,7 +37,7 @@ const projects = [
     imgAfter: "./assets/img/portfolio.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Portfolio",
-    link: "./MyPortfolio.html",  // New key
+    link: "./MyPortfolio.html",  
   },
   {
     name: "FlappyBirdJAVA",
@@ -45,7 +45,7 @@ const projects = [
     imgAfter: "./assets/img/flappybird.png",
     tags: ["BACK-END", "JAVA", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/FlappyBirdJAVA",
-    link: "./FlappyBirdJAVA.html",  // New key
+    link: "./FlappyBirdJAVA.html",  
   },
   {
     name: "Tralivecom",
@@ -53,7 +53,7 @@ const projects = [
     imgAfter: "./assets/img/traliveafter.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/No-More-NoobSite",
-    link: "./Tralivecom.html",  // New key
+    link: "./Tralivecom.html",  
   },
   {
     name: "conferencecom",
@@ -61,7 +61,7 @@ const projects = [
     imgAfter: "./assets/img/cona.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "ANIMATIONS"],
     github: "",
-    link: "./conferencecom.html",  // New key
+    link: "./conferencecom.html",  
   },
   {
     name: "bexercom",
@@ -69,7 +69,7 @@ const projects = [
     imgAfter: "./assets/img/bexera.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "ANIMATIONS"],
     github: "",
-    link: "./bexercom.html",  // New key
+    link: "./bexercom.html",  
   },
   {
     name: "travelcom",
@@ -77,7 +77,7 @@ const projects = [
     imgAfter: "./assets/img/shipa.png",
     tags: ["FRONT-END", "CSS", "HTML5", "JAVASCRIPT", "ANIMATIONS"],
     github: "",
-    link: "./travelcom.html",  // New key
+    link: "./travelcom.html",  
   },
   {
     name: "neoncarddesign",
@@ -85,7 +85,7 @@ const projects = [
     imgAfter: "./assets/img/neona.png",
     tags: ["FRONT-END", "CSS", "HTML5", "UI/UX DESIGN", "ANIMATIONS"],
     github: "",
-    link: "./neoncarddesign.html",  // New key
+    link: "./neoncarddesign.html",  
   },
   {
     name: "apprucom",
@@ -93,7 +93,7 @@ const projects = [
     imgAfter: "./assets/img/apprua.png",
     tags: ["FRONT-END", "CSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "",
-    link: "./apprucom.html",  // New key
+    link: "./apprucom.html",  
   },
   {
     name: "coffeeshopcom",
@@ -101,7 +101,7 @@ const projects = [
     imgAfter: "./assets/img/coffeea.png",
     tags: ["FRONT-END", "BACK-END", "SCSS", "NODEJS", "REACTJS", "CSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/CafeSite",
-    link: "./coffeeshopcom.html",  // New key
+    link: "./coffeeshopcom.html",  
   },
 ];  
 
@@ -183,41 +183,36 @@ function generateProjectHTML(project) {
 document.addEventListener('DOMContentLoaded', function() {
   const currentTitle = document.title;
 
-  // Find the current project based on the title
   const currentIndex = projects.findIndex(p => p.name === currentTitle);
 
   if (currentIndex !== -1) {
     const project = projects[currentIndex];
 
-    // Generate project HTML content
     const projectHTML = generateProjectHTML(project);
 
-    // Insert project HTML into the main element
     const mainElement = document.querySelector('main');
     mainElement.innerHTML = projectHTML;
 
-    // Determine the previous and next project links
-    let prevLink = "#"; // Default to a placeholder
-    let nextLink = "#"; // Default to a placeholder
+    let prevLink = "#"; 
+    let nextLink = "#"; 
 
     if (currentIndex > 0) {
-      prevLink = projects[currentIndex - 1].link; // Previous project
+      prevLink = projects[currentIndex - 1].link; 
     }
 
     if (currentIndex < projects.length - 1) {
-      nextLink = projects[currentIndex + 1].link; // Next project
+      nextLink = projects[currentIndex + 1].link; 
     }
 
-    // Update the Page Control links
     const prevElement = document.querySelector('.pageControl .prev');
     const nextElement = document.querySelector('.pageControl .next');
 
     if (prevElement) {
-      prevElement.href = prevLink; // Set the Previous Project link
+      prevElement.href = prevLink; 
     }
 
     if (nextElement) {
-      nextElement.href = nextLink; // Set the Next Project link
+      nextElement.href = nextLink; 
     }
   } else {
     console.error("Project not found for title:", currentTitle);
