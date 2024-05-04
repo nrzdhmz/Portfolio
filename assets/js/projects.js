@@ -1,8 +1,8 @@
 const projects = [
   {
     name: "SnakeGameJAVA",
-    imgBefore: "./assets/img/snakebefore.png",
-    imgAfter: "./assets/img/snakeafter.png",
+    imgAfter: "./assets/img/snakebefore.png",
+    imgBefore: "./assets/img/snakeafter.png",
     tags: ["BACK-END", "JAVA", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Snake_Java_Advanced",
     link: "./SnakeGameJAVA.html",  
@@ -121,7 +121,7 @@ function generateProjectHTML(project) {
                 }. Check out the source code, and find out more about the project below.
               </h3>
               <div class="test">
-                <button class="submit submit-available">GET THE SOURCE CODE</button>
+                <button class="submit submit-available"><a target="_blank" href="${project.github}" class="submit">GET THE SOURCE CODE</a></button>
                 <div class="socialBtns">
                   <a target="_blank" href="${project.github}" class="icon github submit"><img src="../assets/svg/github-mark.svg" alt="github"></a>
                   <a target="_blank" href="https://github.com/nrzdhmz" class="icon insta submit"><img src="../assets/svg/insta.svg" alt="insta"></a>
