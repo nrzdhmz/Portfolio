@@ -181,14 +181,16 @@ function generateProjectHTML(project) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const snakeGameProject = projects.find(project => project.name === 'SnakeGameJAVA');
+  const currentTitle = document.title;
 
-  if (snakeGameProject) {
-    const projectHTML = generateProjectHTML(snakeGameProject);
+  const project = projects.find(p => p.name === currentTitle);
+
+  if (project) {
+    const projectHTML = generateProjectHTML(project);
 
     const mainElement = document.querySelector('main');
     mainElement.innerHTML = projectHTML;
+  } else {
+    console.error("Project not found for title:", currentTitle);
   }
 });
-
-
