@@ -110,3 +110,13 @@
     }
   }
 }
+
+
+.disqus{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .giscus{
+    width: 60%;
+  }
+}

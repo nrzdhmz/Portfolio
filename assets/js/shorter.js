@@ -34,7 +34,7 @@ const projects = [
     imgAfter: "./assets/img/snakeafter.png",
     tags: ["BACK-END", "JAVA", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Snake_Java_Advanced",
-    link: "./projects/SnakeGameJAVA.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "TextEditor",
@@ -42,7 +42,7 @@ const projects = [
     imgAfter: "./assets/img/texteditorafter.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Text-Editor",
-    link: "./projects/TextEditor.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "Calculator",
@@ -50,7 +50,7 @@ const projects = [
     imgAfter: "./assets/img/calculatorafter.png",
     tags: ["FRONT-END", "CSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Calculator_simple",
-    link: "./projects/Calculator.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "TetrisJs",
@@ -58,7 +58,7 @@ const projects = [
     imgAfter: "./assets/img/tetrisafter.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Tetris_Javascript",
-    link: "./projects/TetrisJs.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "MyPortfolio",
@@ -66,7 +66,7 @@ const projects = [
     imgAfter: "./assets/img/portfoliobefore.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/Portfolio",
-    link: "./projects/MyPortfolio.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "FlappyBirdJAVA",
@@ -74,7 +74,7 @@ const projects = [
     imgAfter: "./assets/img/flappybird.png",
     tags: ["BACK-END", "JAVA", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/FlappyBirdJAVA",
-    link: "./projects/FlappyBirdJAVA.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "Tralivecom",
@@ -82,7 +82,7 @@ const projects = [
     imgAfter: "./assets/img/traliveafter.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/No-More-NoobSite",
-    link: "./projects/Tralivecom.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "conferencecom",
@@ -90,7 +90,7 @@ const projects = [
     imgAfter: "./assets/img/cona.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "ANIMATIONS"],
     github: "",
-    link: "./projects/conferencecom.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "bexercom",
@@ -98,7 +98,7 @@ const projects = [
     imgAfter: "./assets/img/bexera.png",
     tags: ["FRONT-END", "SCSS", "HTML5", "JAVASCRIPT", "ANIMATIONS"],
     github: "",
-    link: "./projects/bexercom.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "travelcom",
@@ -106,7 +106,7 @@ const projects = [
     imgAfter: "./assets/img/shipa.png",
     tags: ["FRONT-END", "CSS", "HTML5", "JAVASCRIPT", "ANIMATIONS"],
     github: "",
-    link: "./projects/travelcom.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "neoncarddesign",
@@ -114,7 +114,7 @@ const projects = [
     imgAfter: "./assets/img/neona.png",
     tags: ["FRONT-END", "CSS", "HTML5", "UI/UX DESIGN", "ANIMATIONS"],
     github: "",
-    link: "./projects/neoncarddesign.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "apprucom",
@@ -122,7 +122,7 @@ const projects = [
     imgAfter: "./assets/img/apprua.png",
     tags: ["FRONT-END", "CSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "",
-    link: "./projects/apprucom.html",  // New key
+    link: "./current.html",  // New key
   },
   {
     name: "coffeeshopcom",
@@ -130,7 +130,7 @@ const projects = [
     imgAfter: "./assets/img/coffeea.png",
     tags: ["FRONT-END", "BACK-END", "SCSS", "NODEJS", "REACTJS", "CSS", "HTML5", "JAVASCRIPT", "UI/UX DESIGN", "ANIMATIONS"],
     github: "https://github.com/nrzdhmz/CafeSite",
-    link: "./projects/coffeeshopcom.html",  // New key
+    link: "./current.html",  // New key
   },
 ];
 
@@ -201,4 +201,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   filterProjects("show all projects");
 });
+
 

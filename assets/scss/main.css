@@ -929,6 +929,15 @@ p {
   font-size: 0.9em;
 }
 
+.disqus {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.disqus .giscus {
+  width: 60%;
+}
+
 .gridList {
   margin-bottom: 40px;
   display: flex;

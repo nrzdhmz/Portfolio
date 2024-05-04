@@ -121,11 +121,11 @@ function generateProjectHTML(project) {
                 }. Check out the source code, and find out more about the project below.
               </h3>
               <div class="test">
-                <button class="submit submit-available">GET THE SOURCE CODE</button>
+                <button class="submit submit-available"><a class="submit" target="_blank" href="${project.github}"> GET THE SOURCE CODE</a></button>
                 <div class="socialBtns">
-                  <a target="_blank" href="${project.github}" class="icon github submit"><img src="../assets/svg/github-mark.svg" alt="github"></a>
-                  <a target="_blank" href="https://github.com/nrzdhmz" class="icon insta submit"><img src="../assets/svg/insta.svg" alt="insta"></a>
-                  <a target="_blank" href="https://www.linkedin.com/in/hamza-nuruzade-a90531297/" class="icon linkedin submit"><img src="../assets/svg/linkedin.svg" alt="linkedin"></a>
+                  <a target="_blank" href="${project.github}" class="icon github submit"><img src="./assets/svg/github-mark.svg" alt="github"></a>
+                  <a target="_blank" href="https://github.com/nrzdhmz" class="icon insta submit"><img src="./assets/svg/insta.svg" alt="insta"></a>
+                  <a target="_blank" href="https://www.linkedin.com/in/hamza-nuruzade-a90531297/" class="icon linkedin submit"><img src="./assets/svg/linkedin.svg" alt="linkedin"></a>
                 </div>
               </div>
             </div>
@@ -157,11 +157,11 @@ function generateProjectHTML(project) {
           </div>
         </section>
         <div class="pageControl">
-          <a href="../contact.html" class="next" title="Web Development Portfolio">
+          <a href="./contact.html" class="next" title="Web Development Portfolio">
             <span>Next Project</span>
             <em></em>
           </a>
-          <a href="../index.html" class="prev" title="Web Development Portfolio">
+          <a href="./index.html" class="prev" title="Web Development Portfolio">
             <span>Previous Project</span>
             <em></em>
           </a>
@@ -173,7 +173,7 @@ function generateProjectHTML(project) {
             >Follow on Github</a>
           </div>
         </div>
-      </div>
+      </div>      
     </main>
   `;
 }
@@ -190,3 +190,5 @@ document.addEventListener('DOMContentLoaded', function() {
     mainElement.innerHTML = projectHTML;
   }
 });
+
+
