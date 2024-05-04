@@ -1,32 +1,3 @@
-// HTML SHORTEN
-
-const filterList = document.getElementById("filterList");
-const skills = [
-  "Show All Projects",
-  "FRONT-END",
-  "BACK-END",
-  "JAVA",
-  "HTML5",
-  "CSS",
-  "SCSS",
-  "JAVASCRIPT",
-  "NODEJS",
-  "REACTJS",
-  "UI/UX DESIGN",
-  "ANIMATIONS",
-];
-
-for (let i = 0; i < skills.length; i++) {
-  const skill = skills[i];
-  const li = document.createElement("li");
-  li.id = skill.toLowerCase().replace(/[^a-z]/g, "");
-  li.title = `Filter by ${skill}`;
-  li.innerHTML = `<span>${skill.toLowerCase()}</span>`;
-  filterList.appendChild(li);
-}
-
-
-
 const projects = [
   {
     name: "SnakeGameJAVA",
@@ -132,72 +103,95 @@ const projects = [
     github: "https://github.com/nrzdhmz/CafeSite",
     link: "./projects/coffeeshopcom.html",  // New key
   },
-];
+];  
 
 
-const gridList = document.querySelector(".gridList");
 
-for (let i = 0; i < projects.length; i++) {
-  const project = projects[i];
-
-  const li = document.createElement("li");
-  li.classList.add("item");
-
-  li.innerHTML = `
-    <a href="${project.link}" target="_blank" class="screen">
-      <div class="bar">
-        <h2>${project.name}</h2>
-        <i></i>
-      </div>
-      <div class="main">
-        <div class="back">
-          <img src="${project.imgBefore}" alt="${project.name}" />
-        </div>
-        <div class="tags">
-          <div>
-            <ul>
-              ${project.tags.map((tag) => `<li>${tag}</li>`).join("")}
-            </ul>
+function generateProjectHTML(project) {
+  return `
+    <main>
+      <div class="testpage">
+        <section class="centered">
+          <div class="wrapper">
+            <div class="headerMe">
+              <h1 id="name">${project.name}</h1>
+              <h3>
+                This project uses a combination of various technologies, including ${
+                  project.tags.join(", ")
+                }. Check out the source code, and find out more about the project below.
+              </h3>
+              <div class="test">
+                <button class="submit submit-available">GET THE SOURCE CODE</button>
+                <div class="socialBtns">
+                  <a target="_blank" href="${project.github}" class="icon github submit"><img src="../assets/svg/github-mark.svg" alt="github"></a>
+                  <a target="_blank" href="https://github.com/nrzdhmz" class="icon insta submit"><img src="../assets/svg/insta.svg" alt="insta"></a>
+                  <a target="_blank" href="https://www.linkedin.com/in/hamza-nuruzade-a90531297/" class="icon linkedin submit"><img src="../assets/svg/linkedin.svg" alt="linkedin"></a>
+                </div>
+              </div>
+            </div>
+            <div class="imgcontainer">
+              <img id="imgBefore" src=".${project.imgBefore}" alt="${project.name} Before">
+            </div>
+            <div class="test-content">
+              <h2>About this project</h2>
+              <hr>
+              <br>
+              <p>This project is a demonstration of my skills in various technologies. It features interactive design elements, animations, and a strong emphasis on UI/UX.</p>
+              <br>
+              <h2>Technical Sheet</h2>
+              <p>Technologies used in this project:</p>
+              <br>
+              <ul itemprop="keywords" id="tags" class="keywords">
+                ${project.tags.map(tag => `<li>${tag}</li>`).join("")}
+              </ul>
+              <br>
+              <h2>Github</h2>
+              <hr>
+              <br>
+              <ul class="keywords">
+                <li>Get the code
+                  <div class="texture hovering"><a id="github" href="${project.github}">Link</a></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="pageControl">
+          <a href="../contact.html" class="next" title="Web Development Portfolio">
+            <span>Next Project</span>
+            <em></em>
+          </a>
+          <a href="../index.html" class="prev" title="Web Development Portfolio">
+            <span>Previous Project</span>
+            <em></em>
+          </a>
+          <div class="lent">
+            <a
+              target="_blank"
+              href="https://github.com/nrzdhmz"
+              title="Follow on Github"
+            >Follow on Github</a>
           </div>
         </div>
-        <div class="imgs">
-          <img src="${project.imgAfter}" alt="${project.name}" />
-        </div>
       </div>
-    </a>
+    </main>
   `;
-  gridList.appendChild(li);
 }
 
 
 
-// FILTERING
+document.addEventListener('DOMContentLoaded', function() {
+  const snakeGameProject = projects.find(project => project.name === 'Calculator');
 
-document.addEventListener("DOMContentLoaded", function () {
-  const filterList = document.getElementById("filterList");
-  const gridList = document.querySelector(".gridList");
-  const items = gridList.querySelectorAll(".item");
+  if (snakeGameProject) {
+    const projectHTML = generateProjectHTML(snakeGameProject);
 
-  function filterProjects(tag) {
-    items.forEach((item) => {
-      const tags = Array.from(item.querySelectorAll(".tags li")).map(
-        (el) => el.textContent
-      );
+    const mainElement = document.querySelector('main');
 
-      if (tag === "show all projects" || tags.includes(tag.toUpperCase())) {
-        item.style.display = "block"; 
-      } else {
-        item.style.display = "none"; 
-      }
-    });
-  }
-
-  filterList.addEventListener("click", function (event) {
-    if (event.target.tagName === "LI" || event.target.tagName === "SPAN") {
-      const selectedFilter = event.target.textContent.trim();
-      filterProjects(selectedFilter); 
+    if (mainElement) {
+      mainElement.innerHTML = projectHTML;
+    } else {
+      console.error('Main element not found.');
     }
-  });
-
-  filterProjects("show all projects");
+  }
 });

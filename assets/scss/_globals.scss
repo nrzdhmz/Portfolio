@@ -3,7 +3,7 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  list-style-type: none;
+  // list-style-type: none;
   box-sizing: border-box;
 }
 body::-webkit-scrollbar{
@@ -48,3 +48,28 @@ html {
       opacity: 1;
   }
 } 
+hr{
+  border: none;
+  background-color: #8a8a8a;
+  height: 0.5px;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.35em;
+  font-weight: 600;
+  position: relative;
+  display: block;
+  letter-spacing: -.045em;
+  padding: 0;
+  margin-bottom: .4em;
+  color: #cacaca;
+}
+p{
+  font-size: 1.15em;
+  color: #8a8a8a;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  line-height: 1.7em;
+  word-spacing: 0.02em;
+  font-weight: 400;
+}

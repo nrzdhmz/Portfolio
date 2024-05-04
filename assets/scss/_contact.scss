@@ -43,11 +43,6 @@
     border: none;
     outline: none;
   }
-  hr{
-    border: none;
-    background-color: #8a8a8a;
-    height: 1px;
-  }
   .control{
     padding: 20px 0 0;
     display: flex;
@@ -93,38 +88,39 @@
     margin-top: 8px;
     margin-bottom: 14px;
   }
-  .socialBtns{
+}
+
+.socialBtns{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  .icon{
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-    .icon{
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      a{
-        color: rgb(235, 241, 248);
-      }
+    gap: 4px;
+    a{
+      color: rgb(235, 241, 248);
     }
-    .github{
-      background-color: #4e545a;
-    }
-    .linkedin{
-      background-color: #0077ba;
-    }
-    .insta{
-      background: radial-gradient(
-        circle at 0% 110%,
-        #fdf497 0,
-        #fdf497 5%,
-        #fd5949 45%,
-        #d6249f 60%,
-        #285aeb 90%
-      )
-    }
-    img{
-      width: 20px;
-      height: 20px;
-    }
+  }
+  .github{
+    background-color: #4e545a;
+  }
+  .linkedin{
+    background-color: #0077ba;
+  }
+  .insta{
+    background: radial-gradient(
+      circle at 0% 110%,
+      #fdf497 0,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    )
+  }
+  img{
+    width: 20px;
+    height: 20px;
   }
 }

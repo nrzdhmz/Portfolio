@@ -1,0 +1,38 @@
+.testpage{
+  .test{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    .socialBtns{
+      margin: 0;
+    }
+  }
+  .imgcontainer{
+    margin: 0 20px;
+    width: 100%;
+    margin-top: 30px;
+    img{
+      width: 100%;
+    }
+  }
+}
+.test-content{
+  margin: 50px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.keywords{
+  margin-left: 20px;
+  li{
+    font-size: 1.3em;
+    line-height: 1.65em;
+    margin-bottom: 3px;
+  }
+}
+
+.hovering {
+  top: -35px;
+  left: 140px;
+}

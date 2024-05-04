@@ -153,7 +153,6 @@ nav.open a {
   padding: 0;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  list-style-type: none;
   box-sizing: border-box;
 }
 
@@ -211,6 +210,33 @@ html {
     opacity: 1;
   }
 }
+hr {
+  border: none;
+  background-color: #8a8a8a;
+  height: 0.5px;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.35em;
+  font-weight: 600;
+  position: relative;
+  display: block;
+  letter-spacing: -0.045em;
+  padding: 0;
+  margin-bottom: 0.4em;
+  color: #cacaca;
+}
+
+p {
+  font-size: 1.15em;
+  color: #8a8a8a;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  line-height: 1.7em;
+  word-spacing: 0.02em;
+  font-weight: 400;
+}
+
 @keyframes slideDown {
   0% {
     transform: translateY(-5px);
@@ -781,6 +807,7 @@ html {
   padding: 80px 0 60px;
   display: flex;
   justify-content: center;
+  text-align: left;
 }
 @media only screen and (max-width: 1600px) {
   .centered .wrapper {
@@ -1244,11 +1271,6 @@ footer .footertext {
   border: none;
   outline: none;
 }
-.form hr {
-  border: none;
-  background-color: #8a8a8a;
-  height: 1px;
-}
 .form .control {
   padding: 20px 0 0;
   display: flex;
@@ -1296,30 +1318,31 @@ footer .footertext {
   margin-top: 8px;
   margin-bottom: 14px;
 }
-.share .socialBtns {
+
+.socialBtns {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 20px;
 }
-.share .socialBtns .icon {
+.socialBtns .icon {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.share .socialBtns .icon a {
+.socialBtns .icon a {
   color: rgb(235, 241, 248);
 }
-.share .socialBtns .github {
+.socialBtns .github {
   background-color: #4e545a;
 }
-.share .socialBtns .linkedin {
+.socialBtns .linkedin {
   background-color: #0077ba;
 }
-.share .socialBtns .insta {
+.socialBtns .insta {
   background: radial-gradient(circle at 0% 110%, #fdf497 0, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
 }
-.share .socialBtns img {
+.socialBtns img {
   width: 20px;
   height: 20px;
 }
@@ -1363,4 +1386,42 @@ select {
   100% {
     filter: drop-shadow(0 0 30px white) drop-shadow(0 0 30px white) drop-shadow(0 0 30px white);
   }
+}
+.testpage .test {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.testpage .test .socialBtns {
+  margin: 0;
+}
+.testpage .imgcontainer {
+  margin: 0 20px;
+  width: 100%;
+  margin-top: 30px;
+}
+.testpage .imgcontainer img {
+  width: 100%;
+}
+
+.test-content {
+  margin: 50px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.keywords {
+  margin-left: 20px;
+}
+.keywords li {
+  font-size: 1.3em;
+  line-height: 1.65em;
+  margin-bottom: 3px;
+}
+
+.hovering {
+  top: -35px;
+  left: 140px;
 }/*# sourceMappingURL=main.css.map */
