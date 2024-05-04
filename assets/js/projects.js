@@ -181,17 +181,12 @@ function generateProjectHTML(project) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const snakeGameProject = projects.find(project => project.name === 'Calculator');
+  const snakeGameProject = projects.find(project => project.name === 'SnakeGameJAVA');
 
   if (snakeGameProject) {
     const projectHTML = generateProjectHTML(snakeGameProject);
 
     const mainElement = document.querySelector('main');
-
-    if (mainElement) {
-      mainElement.innerHTML = projectHTML;
-    } else {
-      console.error('Main element not found.');
-    }
+    mainElement.innerHTML = projectHTML;
   }
 });
