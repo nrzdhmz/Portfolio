@@ -109,14 +109,6 @@ const projects = [
     link: "./projects/travelcom.html",  // New key
   },
   {
-    name: "neoncarddesign",
-    imgBefore: "./assets/img/neonb.png",
-    imgAfter: "./assets/img/neona.png",
-    tags: ["FRONT-END", "CSS", "HTML5", "UI/UX DESIGN", "ANIMATIONS"],
-    github: "",
-    link: "./projects/neoncarddesign.html",  // New key
-  },
-  {
     name: "apprucom",
     imgBefore: "./assets/img/apprub.png",
     imgAfter: "./assets/img/apprua.png",
@@ -144,7 +136,7 @@ for (let i = 0; i < projects.length; i++) {
   li.classList.add("item");
 
   li.innerHTML = `
-    <a href="${project.link}" target="_blank" class="screen">
+    <a href="${project.link}" target="_self" class="screen">
       <div class="bar">
         <h2>${project.name}</h2>
         <i></i>

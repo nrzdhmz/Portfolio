@@ -15,6 +15,12 @@
   background-color: transparent;
   transition: 0.3s ease-in-out;
 }
+@media (max-width: 960px) {
+  .header .burger {
+    top: 30px;
+    right: 25px;
+  }
+}
 .header .burger i {
   position: absolute;
   width: 42px;
@@ -268,12 +274,22 @@ p {
   text-align: center;
   max-width: 640px;
 }
+@media (max-width: 960px) {
+  .aboutMe .aboutMeText {
+    max-width: 220px;
+  }
+}
 .aboutMe .aboutMeText .aboutTitle {
   color: #cacaca;
   font-size: 1.8em;
   line-height: 1.7em;
   font-weight: 700;
   letter-spacing: -1.5px;
+}
+@media (max-width: 960px) {
+  .aboutMe .aboutMeText .aboutTitle {
+    font-size: 1.4em;
+  }
 }
 .aboutMe .aboutMeText .aboutContent {
   display: flex;
@@ -546,9 +562,22 @@ p {
   position: absolute;
   left: 0;
 }
+@media (max-width: 960px) {
+  .socials {
+    left: 0;
+  }
+}
 .socials ul {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 960px) {
+  .socials ul {
+    gap: 10px;
+  }
+}
+.socials ul li {
+  list-style-type: none;
 }
 .socials ul li .github {
   background-color: #4e545a;
@@ -568,6 +597,15 @@ p {
   padding-left: 20px;
   margin-left: -20px;
   transition: 0.425s cubic-bezier(0.05, 0.65, 0.18, 1);
+}
+@media (max-width: 960px) {
+  .socials ul li a {
+    width: 55px;
+    height: 55px;
+    margin-left: 0;
+    padding-left: 0;
+    border-radius: 5px;
+  }
 }
 .socials ul li a:hover {
   margin-left: 0;
@@ -727,6 +765,11 @@ p {
   width: 220px;
   height: 200px;
   z-index: 9000;
+}
+@media (max-width: 960px) {
+  .pageControl .lent {
+    display: none;
+  }
 }
 .pageControl .lent a {
   position: absolute;

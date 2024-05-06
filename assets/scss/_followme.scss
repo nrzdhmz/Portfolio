@@ -149,6 +149,11 @@
     width: 220px;
     height: 200px;
     z-index: 9000;
+    @media (max-width: 960px) {
+      & {
+        display: none;
+      }
+    }
     a {
       position: absolute;
       display: block;
