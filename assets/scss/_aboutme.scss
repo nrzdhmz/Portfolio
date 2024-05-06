@@ -28,19 +28,20 @@
     max-width: 640px;
     @media (max-width: 960px) {
       & {
-        max-width: 220px;
+        width: 60%;
       }
     }
+
 
     .aboutTitle { 
       color: #cacaca;
       font-size: 1.8em;
-      line-height: 1.7em;
+      line-height: 1.6em;
       font-weight: 700;
       letter-spacing: -1.5px;
       @media (max-width: 960px) {
         &{
-          font-size: 1.4em;
+          font-size: 1.3em;
         }
       }
     }
@@ -57,11 +58,11 @@
       justify-content: center;
       align-items: center;
       gap: 3px;
-      // @media (max-width: 960px) {
-      //   &{
-      //     font-size: 0.90em;
-      //   }
-      // }
+      @media (max-width: 960px) {
+        &{
+          font-size: 0.90em;
+        }
+      }
       @for $i from 1 through 40 {
         span:nth-child(#{$i}) {
           animation: slideDown 0.3s ease-out; 
@@ -79,6 +80,11 @@
 .cursor {
   animation: cursorAnimation 0.5s infinite;
   animation-delay: 2s;
+  @media (max-width: 960px) {
+    &{
+      display: none;
+    }
+  }
 }
 
 .texture {

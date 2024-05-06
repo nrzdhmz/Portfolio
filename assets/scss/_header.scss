@@ -10,14 +10,13 @@
     width: 50px;
     height: 50px;
     z-index: 10000;
-    // cursor: pointer;
     padding: 5px 4px;
     background-color: transparent;
     transition: 0.3s ease-in-out;
     @media (max-width: 960px) {
       &{
-        top: 30px;
-        right: 25px;
+        top: 25px;
+        right: 20px;
       }
     }
     i {
@@ -48,6 +47,11 @@
     opacity: 0;
     pointer-events: none;
     transition: transform 0.45s cubic-bezier(0.45, 0, 0, 1), opacity 0.3s ease;
+    @media (max-width: 960px) {
+      &{
+        padding-top: 70px;
+      }
+    }
     &.open {
       transform: translateY(0);
       opacity: 1;
@@ -79,6 +83,11 @@
       overflow: hidden;
       transform: translate3d(0, -100%, 0);
       transition-duration: 0.45s;
+      @media (max-width: 960px) {
+        &{
+          height: 22%;
+        }
+      }
       @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
           transition-delay: (0.48s - 0.16s * ($i - 1));

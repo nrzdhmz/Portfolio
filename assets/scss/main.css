@@ -17,8 +17,8 @@
 }
 @media (max-width: 960px) {
   .header .burger {
-    top: 30px;
-    right: 25px;
+    top: 25px;
+    right: 20px;
   }
 }
 .header .burger i {
@@ -55,6 +55,11 @@
   pointer-events: none;
   transition: transform 0.45s cubic-bezier(0.45, 0, 0, 1), opacity 0.3s ease;
 }
+@media (max-width: 960px) {
+  .header nav {
+    padding-top: 70px;
+  }
+}
 .header nav.open {
   transform: translateY(0);
   opacity: 1;
@@ -86,6 +91,11 @@
   overflow: hidden;
   transform: translate3d(0, -100%, 0);
   transition-duration: 0.45s;
+}
+@media (max-width: 960px) {
+  .header nav a {
+    height: 22%;
+  }
 }
 .header nav a:nth-child(1) {
   transition-delay: 0.48s;
@@ -276,19 +286,19 @@ p {
 }
 @media (max-width: 960px) {
   .aboutMe .aboutMeText {
-    max-width: 220px;
+    width: 60%;
   }
 }
 .aboutMe .aboutMeText .aboutTitle {
   color: #cacaca;
   font-size: 1.8em;
-  line-height: 1.7em;
+  line-height: 1.6em;
   font-weight: 700;
   letter-spacing: -1.5px;
 }
 @media (max-width: 960px) {
   .aboutMe .aboutMeText .aboutTitle {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 }
 .aboutMe .aboutMeText .aboutContent {
@@ -303,6 +313,11 @@ p {
   justify-content: center;
   align-items: center;
   gap: 3px;
+}
+@media (max-width: 960px) {
+  .aboutMe .aboutMeText .aboutContent {
+    font-size: 0.9em;
+  }
 }
 .aboutMe .aboutMeText .aboutContent span:nth-child(1) {
   animation: slideDown 0.3s ease-out;
@@ -512,6 +527,11 @@ p {
   animation: cursorAnimation 0.5s infinite;
   animation-delay: 2s;
 }
+@media (max-width: 960px) {
+  .cursor {
+    display: none;
+  }
+}
 
 .texture {
   display: flex;
@@ -629,6 +649,16 @@ p {
   height: 50%;
   z-index: 999;
 }
+@media (max-width: 960px) {
+  .pageControl .prev {
+    left: -40px;
+  }
+}
+@media (max-width: 560px) {
+  .pageControl .prev {
+    display: none;
+  }
+}
 .pageControl .prev:hover em::before {
   transform: rotate(30deg);
 }
@@ -655,6 +685,11 @@ p {
   line-height: 1.7em;
   font-weight: 700;
   transition: opacity 0.1s ease 0.125s, transform 0.3s cubic-bezier(0, 0, 0, 1) 0.125s;
+}
+@media (max-width: 560px) {
+  .pageControl .prev span {
+    display: none;
+  }
 }
 .pageControl .prev em {
   display: block;
@@ -697,6 +732,16 @@ p {
   z-index: 999;
   height: 50%;
 }
+@media (max-width: 960px) {
+  .pageControl .next {
+    right: -40px;
+  }
+}
+@media (max-width: 560px) {
+  .pageControl .next {
+    display: none;
+  }
+}
 .pageControl .next:hover em::before {
   transform: rotate(-30deg);
 }
@@ -723,6 +768,11 @@ p {
   line-height: 1.7em;
   font-weight: 700;
   transition: opacity 0.1s ease 0.125s, transform 0.3s cubic-bezier(0, 0, 0, 1) 0.125s;
+}
+@media (max-width: 960px) {
+  .pageControl .next span {
+    display: none;
+  }
 }
 .pageControl .next em {
   display: block;
@@ -997,6 +1047,11 @@ p {
   font-size: 16px;
   line-height: 1.75em;
   color: #8a8a8a;
+}
+@media (max-width: 768px) {
+  .gridList .item {
+    width: 100%;
+  }
 }
 .gridList .item .screen {
   position: relative;
@@ -1375,6 +1430,7 @@ footer .footertext {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 .socialBtns .icon {
