@@ -58,8 +58,8 @@ function toggleInputType() {
       next.classList.add("submit-error");
     }
   } else if (step === 1) {
-    // const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com|aol\.com)$/.test(currentText);
-    const emailRegex = /^([\w]*[\w\.]*(?!\.)@gmail.com)$/.test(currentText);
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com|aol\.com)$/.test(currentText);
+    // const emailRegex = /^([\w]*[\w\.]*(?!\.)@gmail.com)$/.test(currentText);
 
     if (emailRegex) {
       updateDataForCurrentStep(currentText); 
@@ -102,7 +102,7 @@ function checkSendAvailability() {
     }
   }
   else if(step === 1){
-    const emailRegex = /^([\w]*[\w\.]*(?!\.)@gmail.com)$/.test(currentText);
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com)$/.test(currentText);
     if (emailRegex) {
       next.classList.remove("submit-error");
       next.classList.add("submit-available");
@@ -181,8 +181,9 @@ function resetForm() {
   send.classList.remove("submit-unAvailable");
   send.classList.add("submit-available");
 }
+
 const form = document.querySelector("#form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 });
-input.addEventListener("input", checkSendAvailability);
+next.addEventListener("input", checkSendAvailability);

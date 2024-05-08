@@ -278,6 +278,11 @@ p {
   height: 100vh;
   align-items: center;
 }
+@media (max-width: 960px) {
+  .aboutMe {
+    flex-direction: column;
+  }
+}
 .aboutMe .aboutMeText {
   display: flex;
   flex-direction: column;
@@ -287,6 +292,11 @@ p {
 @media (max-width: 960px) {
   .aboutMe .aboutMeText {
     width: 60%;
+  }
+}
+@media (max-width: 560px) {
+  .aboutMe .aboutMeText {
+    width: 85%;
   }
 }
 .aboutMe .aboutMeText .aboutTitle {
@@ -584,7 +594,9 @@ p {
 }
 @media (max-width: 960px) {
   .socials {
-    left: 0;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .socials ul {
@@ -594,6 +606,7 @@ p {
 @media (max-width: 960px) {
   .socials ul {
     gap: 10px;
+    flex-direction: row;
   }
 }
 .socials ul li {
@@ -1345,6 +1358,7 @@ footer .footertext {
   position: relative;
 }
 .form hr {
+  margin-top: -8px;
   width: 90%;
 }
 .form .labels {
@@ -1376,7 +1390,7 @@ footer .footertext {
   color: #8a8a8a;
   font-weight: 600;
   font-size: 18px;
-  margin-top: 20px;
+  height: 40px;
   width: 90%;
 }
 .form textarea {
