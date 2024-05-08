@@ -1030,6 +1030,12 @@ p {
 .disqus .giscus {
   width: 60%;
 }
+@media (max-width: 960px) {
+  .disqus .giscus {
+    width: 100%;
+    margin: 10px;
+  }
+}
 
 .gridList {
   margin-bottom: 40px;
@@ -1502,13 +1508,22 @@ select {
   margin-top: 20px;
   width: 100%;
 }
+@media (max-width: 960px) {
+  .testpage .test {
+    display: none;
+  }
+}
 .testpage .test .socialBtns {
   margin: 0;
 }
 .testpage .imgcontainer {
-  margin: 0 20px;
+  margin: 30px 20px 0;
   width: 96%;
-  margin-top: 30px;
+}
+@media (max-width: 960px) {
+  .testpage .imgcontainer {
+    margin: 10px;
+  }
 }
 .testpage .imgcontainer img {
   width: 100%;

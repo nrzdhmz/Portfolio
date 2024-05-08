@@ -58,7 +58,9 @@ function toggleInputType() {
       next.classList.add("submit-error");
     }
   } else if (step === 1) {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com|aol\.com)$/.test(currentText);
+    // const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com|aol\.com)$/.test(currentText);
+    const emailRegex = /^([\w]*[\w\.]*(?!\.)@gmail.com)$/.test(currentText);
+
     if (emailRegex) {
       updateDataForCurrentStep(currentText); 
       input.value = "";
@@ -100,7 +102,7 @@ function checkSendAvailability() {
     }
   }
   else if(step === 1){
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com|aol\.com)$/.test(currentText);
+    const emailRegex = /^([\w]*[\w\.]*(?!\.)@gmail.com)$/.test(currentText);
     if (emailRegex) {
       next.classList.remove("submit-error");
       next.classList.add("submit-available");
